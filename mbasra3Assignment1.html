@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>balls in yo jaws</title>
+
+    <style>
+        div {
+            text-align: center;
+            white-space: normal;
+            display: flex;
+            border: 5px solid white;
+            justify-content: center;
+        }
+
+        header {
+            font-size: 100px;
+            line-height: 200px;
+        }
+
+        .section1 {
+            width: 40%;
+            min-height: 350px;
+            border-right: 2px solid white;
+            background-color: yellowgreen;
+        }
+
+        .section2 {
+            width: 40%;
+            min-height: 350px;
+            border-left: 2px solid white;
+            background-color: violet;
+        }
+        
+        footer {
+            width: 100%;
+            min-height: 350px;
+        }
+
+        section {
+            float: left;
+            white-space: normal;
+            word-spacing: normal;
+        }
+        p{
+            margin:2px
+        }
+    </style>
+    <script>
+        function fontChange(){
+            console.log(document.getElementsByTagName('a').length);
+            var i = 0;
+            while(i < document.getElementsByTagName('a').length){
+                document.getElementsByTagName("a")[i].style.fontSize = document.getElementById("fontSizes").value + "%";
+                i++;
+            }
+            i = 0;
+            while(i < document.getElementsByTagName('p').length){
+                document.getElementsByTagName("p")[i].style.fontSize = document.getElementById("fontSizes").value + "%";
+                i++;
+            }
+            i = 0;
+            while(i < document.getElementsByTagName('li').length){
+                document.getElementsByTagName("li")[i].style.fontSize = document.getElementById("fontSizes").value + "%";
+                i++;
+            }
+            i = 0;
+            while(i < document.getElementsByTagName('h2').length){
+                document.getElementsByTagName("h2")[i].style.fontSize = (Number(document.getElementById("fontSizes").value)+50) + "%";
+                i++;
+            }
+            i = 0;
+            while(i < document.getElementsByTagName('label').length){
+                document.getElementsByTagName("label")[i].style.fontSize = document.getElementById("fontSizes").value + "%";
+                i++;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div style=" margin:auto; background-color: aqua; min-height: 200px; width: 80%;">
+        <header>My Sakuga Notebook</header>
+    </div>
+    <div>
+        <section class="section1">
+            <h2>Project Tools and Requirements</h2>
+            <ul style="text-align: center; list-style-position: inside; margin-right: 10px;">
+                <li>This project will be using the Sakugabooru API</li>
+                <li>The API will provide direct access to search the image board to find, save, and study the posts they search for from the <a href="https://www.sakugabooru.com/post/show/5249">Sakugabooru website</a></li>
+                <li>Such data that could be collected would be what they search and what they save, in order to create statistics on what our demographic specifically is</li>
+                <li>username, email, password, post_saves, date_of_save, notes, note_modified_date (Still have to think this through)</li>
+            </ul>
+        </section>
+        <section class="section2">
+            <h2>Site Demographics and Goals</h2>
+            <ul>
+                <li>Our main demographic includes animation appreciators and those dedicated or aspiring to learn animation</li>
+                <li>Goal 1: To provide a space for learning animation without the need to download videos or run any external programs</li>
+                <li>Goal 2: To create a canvas designed to capture snippets of animation frame by frame and provide tools for marking and note-taking</li>
+                <li>Goal 3: To offer a basic guide on animation and what one should look out for when studying or creating an animation</li>
+                <li>Goal 4: To give users cloud space for saving, accessing, editing, and exporting their notes/studies </li>
+                <li>I wanted to make this application because as someone with a strong interest for animation and an appreciation for sakugabooru, 
+                    I want to design an app that will allow us to save our notes and studies in one space, like a notebook
+                </li>
+            </ul>
+        </section>
+    </div>
+    <div style="background-color: thistle; margin: auto; min-height: 350px;  width: 80%;">
+        <footer>
+            <section
+                style="background-color: wheat; margin-top: 1%; height: 90%; transform: translateX(10%); width: 30%;" id="section3">
+                <h2>Tools and Resources</h2>
+                <p>API:</p>
+                <a href="https://www.sakugabooru.com/help/api">Sakugabooru API</a>
+                <p>I want the folder categorization to be similar to <b>OneNote</b> and the canvas/note-taking capability similar to <b>PowerPoint</b>, I do not know any sites that can mimic both aside from <b>Google Drive</b></p>
+                <p>Resource Links:</p>
+                <a href="https://www.w3schools.com/html/">w3Schools</a><br>
+                <a href="https://twitter.com/TheFramebyFrame">Frame By Frame References</a>
+            </section>
+            <section
+                style="background-color: wheat; margin-top: 1%; height: 90%; transform: translateX(17%); width: 30%;" id="section4">
+                <h2>Questions and Concerns</h2>
+                <p>The API that I will be using is not RESTful, but REST-like. I did not know there was a difference between the two until I read <a href="https://nordicapis.com/when-is-an-api-truly-rest-vs-rest-like/">this article</a>. Will I have to change topic?</p>
+                <p>If we cannot complete our site's functionality requirements other than the requirements you assigned us for the final project is that still acceptable?</p>
+            </section>
+            <section
+                style="background-color: wheat; margin-top: 1%; height: 90%; transform: translateX(25%); width: 30%;" id="section5">
+                <h2>Font Size Editor</h2>
+                <label>Choose a font to adjust: </label>
+                <select id="fontSizes" onchange="fontChange()">
+                    <option value="80">80</option>
+                    <option value="90">90</option>
+                    <option value="100">100</option>
+                    <option value="110">110</option>
+                    <option value="120">120</option>
+                    <option value="130">130</option>
+                    <option value="140">140</option>
+                </select>
+            </section>
+        </footer>
+    </div>
+
+</body>
+
+
+
+</html>
