@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>balls in yo jaws</title>
+    <title>My Sakuga Notebook Proposal</title>
 
     <style>
         div {
@@ -16,7 +16,7 @@
 
         header {
             font-size: 100px;
-            width:100%;
+            width: 100%;
             line-height: 200px;
         }
 
@@ -72,105 +72,150 @@
         p {
             margin: 2px
         }
-        select{
+
+        select {
+            font-size: 30px;
+        }
+        /*Most of this was unsetting any style values used above 1120px*/ 
+        @media screen and (max-width: 1120px) {
+            body {
+                width: auto;
+            }
+
+            h2.footerH2 {
                 font-size: 30px;
             }
 
-        @media screen and (max-width: 1120px) {
-            body{
-                width: auto;
-            }
-            h2.footerH2{
-                font-size: 30px;
-            }
             header {
                 font-size: 100px;
-                width:unset;
-                margin:unset;
+                width: unset;
+                margin: unset;
             }
-            footer{
+
+            footer {
                 width: 50%;
                 align-content: center;
             }
-            div{
+
+            div {
                 display: unset;
                 justify-content: unset;
-                border:unset;
-                
+                border: unset;
+
             }
 
-            section{
-                float:unset;
+            section {
+                float: unset;
                 align-items: center;
             }
-            .section1{
+
+            .section1 {
                 width: unset;
             }
-            .section2{
+
+            .section2 {
                 width: unset;
             }
-            .section3{
+
+            .section3 {
                 width: 175%;
-                height:unset;
+                height: unset;
                 transform: translateX(7%);
             }
-            .section4{
+
+            .section4 {
                 width: 175%;
                 height: unset;
                 transform: unset;
                 transform: translateX(7%);
             }
-            .section5{
+
+            .section5 {
                 width: 175%;
                 height: unset;
                 transform: unset;
                 transform: translateX(7%);
             }
-            .footerDiv{
+
+            .footerDiv {
                 width: unset !important;
                 display: flex;
-                flex:1;
+                flex: 1;
             }
-            .headerDiv{
+
+            .headerDiv {
                 text-align: center !important;
-                margin:unset !important;
-                width:unset !important;
+                margin: unset !important;
+                width: unset !important;
                 display: flex;
-                flex:1;
+                flex: 1;
                 align-items: center;
                 justify-content: center;
             }
-            label{
+
+            label {
                 font-size: 40px;
             }
-            select{
+
+            select {
                 font-size: 40px;
             }
-            p{
+
+            p {
                 font-size: 40px;
             }
-            a{
+
+            a {
                 font-size: 40px;
             }
-         
+
+            .section3 p {
+                font-size: 20px !important;
+            }
+
+            .section3 a {
+                font-size: 20px !important;
+            }
+
+            .section4 p {
+                font-size: 20px !important;
+            }
+
+            .section4 a {
+                font-size: 20px !important;
+            }
+
+            .section5 label {
+                font-size: 50px !important;
+            }
+
         }
+        /*Supported on certain versions, had to update Chrome for this to work*/
+        @media (hover:hover) {
+            a:hover{
+                background: blue;
+                color: white
+            }
+        }
+        
     </style>
     <script>
+        /*Adjusts font using percentage values taken from dropdown*/
         function fontChange() {
             console.log(document.getElementsByTagName('a').length);
             var i = 0;
             while (i < document.getElementsByTagName('a').length) {
-                document.getElementsByTagName("a")[i].style.fontSize = (Number(document.getElementById("fontSizes").value)+25)+ "%";
+                document.getElementsByTagName("a")[i].style.fontSize = (Number(document.getElementById("fontSizes").value) + 25) + "%";
                 i++;
             }
             i = 0;
             while (i < document.getElementsByTagName('p').length) {
-                document.getElementsByTagName("p")[i].style.fontSize = (Number(document.getElementById("fontSizes").value)+25)+ "%";
+                document.getElementsByTagName("p")[i].style.fontSize = (Number(document.getElementById("fontSizes").value) + 25) + "%";
                 i++;
             }
             i = 0;
             while (i < document.getElementsByTagName('li').length) {
-                document.getElementsByTagName("li")[i].style.fontSize = (Number(document.getElementById("fontSizes").value)+25)+ "%";
+                document.getElementsByTagName("li")[i].style.fontSize = (Number(document.getElementById("fontSizes").value) + 25) + "%";
                 i++;
             }
             i = 0;
@@ -180,7 +225,7 @@
             }
             i = 0;
             while (i < document.getElementsByTagName('label').length) {
-                document.getElementsByTagName("label")[i].style.fontSize = (Number(document.getElementById("fontSizes").value)+200)+ "%";
+                document.getElementsByTagName("label")[i].style.fontSize = (Number(document.getElementById("fontSizes").value) + 200) + "%";
                 i++;
             }
         }
